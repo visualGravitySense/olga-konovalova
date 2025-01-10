@@ -1,0 +1,449 @@
+.hero-banner {
+  background: linear-gradient(135deg, #801d53, #3b295c);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-buttons .btn-primary,
+.hero-buttons .btn-secondary {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.hero-buttons .btn-primary {
+  background: #a13e72;
+  color: white;
+}
+
+.hero-buttons .btn-secondary {
+  background: #fff;
+  color: #a13e72;
+}
+
+.projects-section {
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #3b295c;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  padding: 20px;
+  color: #fff;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.project-card button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #801d53;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.about-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f8f8f8 50%, #f3e7f2 100%);
+  text-align: center;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  /* align-items: center; */
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: #3b295c;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.about-list-container {
+  flex: 1;
+  text-align: left;
+}
+
+.about-list-container h3 {
+  font-size: 1.8rem;
+  color: #801d53;
+  margin-bottom: 15px;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-list li {
+  font-size: 1rem;
+  line-height: 1.8;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.about-icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: #801d53;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text,
+  .about-list-container {
+    text-align: center;
+  }
+
+  .about-list li {
+    justify-content: center;
+  }
+}
+
+
+.services-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #3b295c;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #3b295c;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .services-section h2 {
+    font-size: 2rem;
+  }
+
+  .service-card {
+    text-align: center;
+  }
+
+  .service-icon {
+    margin: 0 auto 20px auto;
+  }
+}
+
+.personal-info-section {
+  padding: 60px 20px;
+  background-color: #f4f8fb;
+  text-align: center;
+}
+
+.personal-info-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+.personal-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.personal-info-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.personal-info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.personal-info-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.personal-info-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.personal-info-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.personal-info-card li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.personal-info-card li::before {
+  content: "•";
+  color: #2c3e50;
+  font-weight: bold;
+  display: inline-block;
+  width: 1rem;
+  margin-left: -1rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .personal-info-section h2 {
+    font-size: 2rem;
+  }
+
+  .personal-info-card {
+    text-align: center;
+  }
+
+  .personal-info-icon {
+    margin: 0 auto 20px auto;
+  }
+}
+
+.recommendations-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.recommendations-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.recommendation-card {
+  background-color: #f4f8fb;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.recommendation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.recommendation-header h3 {
+  font-size: 1.5rem;
+  color: #34495e;
+}
+
+.recommendation-title {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.recommendation-company {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .recommendations-section h2 {
+    font-size: 2rem;
+  }
+
+  .recommendation-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .recommendation-title {
+    font-size: 0.8rem;
+  }
+}
+
+.footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ecdbba;
+}
+
+.footer-description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.footer-contact p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.footer-contact a {
+  color: #ecdbba;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .footer h2 {
+    font-size: 1.8rem;
+  }
+
+  .footer-description {
+    font-size: 1rem;
+  }
+
+  .footer-contact p {
+    font-size: 1rem;
+  }
+}
