@@ -170,11 +170,15 @@ button {
 
 /* Hero Banner */
 .hero-banner {
-  background: linear-gradient(135deg, #2D5D4E, #1F4237);
+  background: linear-gradient(135deg, #2D5D4E99, #1F423799), url('assets/tiny-1.png');
   color: #fff;
   padding: 60px 10px;
   text-align: center;
   position: relative;
+
+  background-size: cover; /* Scales the image to cover the entire container */
+  background-position: center center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from tiling */
 }
 
 .hero-content h1 {
@@ -479,6 +483,11 @@ button {
   .faq-question {
     font-size: 1rem;
     padding: 15px;
+  }
+
+  .hero-banner {
+    background: linear-gradient(135deg, #2D5D4E99, #1F423799), url('assets/tiny-2.png');
+    
   }
 
   .hero-content h1 {
@@ -1642,5 +1651,10 @@ button {
   .footer-buttons .btn-secondary {
     width: 100%;
     max-width: 300px;
+  }
+
+  .value-reminder-item {
+    
+    padding: 1px 1px;
   }
 }
