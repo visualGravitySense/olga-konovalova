@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import { FaIndustry, FaHeartbeat, FaFlask, FaLightbulb, FaGraduationCap } from "react-icons/fa";
+import heroImage from './assets/image.png';
 import { FaChartLine, FaProductHunt, FaBullhorn, FaCalendarAlt } from "react-icons/fa";
-import { FaUser, FaBriefcase, FaHeart, FaLaptopCode, FaPhone, FaEnvelope, FaArrowUp, FaCheckCircle, FaClock, FaRocket, FaShieldAlt, FaStar, FaBars, FaTimes, FaQuestionCircle, FaHandshake, FaUsers, FaAward, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaUser, FaBriefcase, FaHeart, FaLaptopCode, FaPhone, FaEnvelope, FaArrowUp, FaCheckCircle, FaClock, FaRocket, FaShieldAlt, FaStar, FaBars, FaTimes, FaQuestionCircle, FaHandshake, FaUsers, FaAward, FaChevronDown, FaChevronUp, FaBuilding, FaAtom, FaCrown } from "react-icons/fa";
 
 const projectsData = [
   {
@@ -322,9 +323,9 @@ function App() {
             <span className="notification-badge">!</span>
           )}
           {/* CREATE Action Funnel: REACTION - Trust indicator */}
-          <span className="availability-indicator">
+          {/* <span className="availability-indicator">
             <FaClock /> Доступна сейчас
-          </span>
+          </span> */}
         </button>
       )}
 
@@ -347,77 +348,233 @@ function App() {
       )}
 
       <div className="hero-banner">
-      <div className="hero-content">
-        <h1>Коновалова Ольга</h1>
-        <p className="hero-subtitle">
-        Эксперт в Маркетинге и PR, Продюсер деловых мероприятий
-        </p>
-        
-        {/* Metrics Section - MOTIVATION */}
-        <div className="hero-metrics">
-          <div className="metric-item">
-            <div className="metric-number">15+</div>
-            <div className="metric-label">Лет опыта</div>
-          </div>
-          <div className="metric-item">
-            <div className="metric-number">50+</div>
-            <div className="metric-label">Успешных проектов</div>
-          </div>
-          <div className="metric-item">
-            <div className="metric-number">100%</div>
-            <div className="metric-label">Клиентская лояльность</div>
-          </div>
-        </div>
+        <div className="hero-container">
+          <div className="hero-content">
+            <h1>Коновалова Ольга</h1>
+            <p className="hero-subtitle">
+            Эксперт в Маркетинге и PR, Продюсер деловых мероприятий
+            </p>
+            
+            {/* Metrics Section - MOTIVATION */}
+            <div className="hero-metrics">
+              <div className="metric-item">
+                <div className="metric-number">15+</div>
+                <div className="metric-label">Лет опыта</div>
+              </div>
+              <div className="metric-item">
+                <div className="metric-number">50+</div>
+                <div className="metric-label">Успешных проектов</div>
+              </div>
+              <div className="metric-item">
+                <div className="metric-number">100%</div>
+                <div className="metric-label">Клиентская лояльность</div>
+              </div>
+            </div>
 
-        {/* CREATE Action Funnel: EVALUATION - Value proposition in hero */}
-        <div className="hero-value-proposition">
-          <div className="value-item">
-            <FaRocket />
-            <span>Быстрый результат</span>
-          </div>
-          <div className="value-item">
-            <FaShieldAlt />
-            <span>Гарантия качества</span>
-          </div>
-          <div className="value-item">
-            <FaStar />
-            <span>Проверенный опыт</span>
-          </div>
-        </div>
+            {/* CREATE Action Funnel: EVALUATION - Value proposition in hero */}
+            <div className="hero-value-proposition">
+              <div className="value-item">
+                <FaRocket />
+                <span>Быстрый результат</span>
+              </div>
+              <div className="value-item">
+                <FaShieldAlt />
+                <span>Гарантия качества</span>
+              </div>
+              <div className="value-item">
+                <FaStar />
+                <span>Проверенный опыт</span>
+              </div>
+            </div>
 
-        <div className="hero-buttons">
-          <a 
-            href="mailto:ola.konovalova@gmail.com?subject=Запрос на консультацию"
-            onClick={() => handleContactClick('email')}
-          >
-            <button className="btn-primary">
-              Связаться сейчас
-              <span className="btn-hint">Бесплатная консультация</span>
-            </button>
-          </a>
-          <button className="btn-secondary" onClick={scrollToContact}>
-            Узнать больше
-            <span className="btn-hint">2 минуты</span>
-          </button>
-        </div>
+            <div className="hero-buttons">
+              <a 
+                href="mailto:ola.konovalova@gmail.com?subject=Запрос на консультацию"
+                onClick={() => handleContactClick('email')}
+              >
+                <button className="btn-primary">
+                  Связаться сейчас
+                  <span className="btn-hint">Бесплатная консультация</span>
+                </button>
+              </a>
+              <button className="btn-secondary" onClick={scrollToContact}>
+                Узнать больше
+                <span className="btn-hint">2 минуты</span>
+              </button>
+            </div>
+          </div>
+          
+          {/* Hero Image - FBM: MOTIVATION - Social proof */}
+          <div className="hero-image-wrapper">
+            <img 
+              src={heroImage} 
+              alt="Ольга Коновалова на выставке Evers group Rus с благодарственным письмом" 
+              className="hero-image"
+              onError={(e) => {
+                // Fallback к существующему изображению, если основное не найдено
+                e.target.style.display = 'none';
+              }}
+            />
+            <div className="hero-image-badge">
+              <FaAward className="badge-icon" />
+              <span>Признание достижений</span>
+            </div>
+          </div>
         </div>
       </div>
 
 {/* -------- ABOUT --------- */}
-
+      {/* FBM: MOTIVATION + ABILITY + PROMPT Enhancement */}
       <div className="about-section fade-in" id="about">
       <div className="about-content">
         <div className="about-text">
           <h2>Обо мне</h2>
-          <p>
           
-          Коновалова Ольга Ивановна - специалист с многолетним опытом в области маркетинга и PR. Работала в таких компаниях, как Эверс груп Рус, Госкорпорация 'Росхимзащита', и других. Образование: Белорусский государственный экономический университет, специальность маркетинг и рекламная деятельность.
+          {/* FBM: ABILITY - Structured introduction for easy comprehension */}
+          <div className="about-intro">
+            <p className="intro-main">
+              Коновалова Ольга Ивановна — специалист с <strong>многолетним опытом</strong> в области маркетинга и PR.
+            </p>
+          </div>
 
-          </p>
-          <p>
-            Разработка и реализация маркетинговых стратегий, выведение новых продуктов на рынок, 
-            повышение лояльности и узнаваемости бренда. 
-          </p>
+          {/* FBM: MOTIVATION - Visual company showcase to build trust and prestige */}
+          <div className="companies-showcase">
+            <h3 className="section-label">
+              <FaBuilding className="section-icon" />
+              Опыт работы в ведущих корпорациях
+            </h3>
+            <div className="companies-grid">
+              <div className="company-card">
+                <div className="company-badge">
+                  <FaShieldAlt className="company-icon" />
+                </div>
+                <div className="company-info">
+                  <strong>Госкорпорация Росхимзащита</strong>
+                  <span className="company-group">
+                    <FaCrown className="group-icon" />
+                    входит в ГК «Ростех»
+                  </span>
+                </div>
+              </div>
+              <div className="company-card">
+                <div className="company-badge">
+                  <FaAtom className="company-icon" />
+                </div>
+                <div className="company-info">
+                  <strong>Парус электро</strong>
+                  <span className="company-group">
+                    <FaCrown className="group-icon" />
+                    входит в ГК «Росатом»
+                  </span>
+                </div>
+              </div>
+              <div className="company-card">
+                <div className="company-badge">
+                  <FaHeartbeat className="company-icon" />
+                </div>
+                <div className="company-info">
+                  <strong>Эверс груп Рус</strong>
+                  <span className="company-group">российский биомедицинский холдинг</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* FBM: ABILITY - Clear education section */}
+          <div className="education-box">
+            <div className="education-icon">
+              <FaGraduationCap />
+            </div>
+            <div className="education-text">
+              <strong>Образование:</strong> Белорусский государственный экономический университет, 
+              специальность «маркетинг и рекламная деятельность»
+            </div>
+          </div>
+
+          {/* Achievements - MOTIVATION */}
+          <div className="achievements-box">
+            <h3>Достижения и признание:</h3>
+            <div className="achievement-item">
+              <FaAward className="achievement-icon" />
+              <span>Участие в конкурсе <b>"Новаторы Москвы"</b> (2020 г.)</span>
+            </div>
+            <div className="achievement-item">
+              <FaAward className="achievement-icon" />
+              <span>Отборочный тур в <b>Совет предпринимателей Москвы</b> (2021 г.)</span>
+            </div>
+          </div>
+
+          {/* FBM: PROMPT - Multiple clear CTAs with different options */}
+          <div className="about-cta-enhanced">
+            <div className="cta-header">
+              <h3>Готовы обсудить ваш проект?</h3>
+              <p>Выберите удобный способ связи</p>
+            </div>
+            <div className="cta-buttons-group">
+              <a 
+                href="mailto:ola.konovalova@gmail.com?subject=Запрос на консультацию"
+                onClick={() => handleContactClick('email')}
+                className="cta-button-primary"
+              >
+                <FaEnvelope />
+                <span>
+                  <strong>Написать email</strong>
+                  <small>Бесплатная консультация</small>
+                </span>
+              </a>
+              <a 
+                href="tel:+79629560669"
+                onClick={() => handleContactClick('телефон')}
+                className="cta-button-secondary"
+              >
+                <FaPhone />
+                <span>
+                  <strong>Позвонить</strong>
+                  <small>+7 (962) 956-06-69</small>
+                </span>
+              </a>
+              <button 
+                className="cta-button-tertiary" 
+                onClick={scrollToContact}
+              >
+                <FaHandshake />
+                <span>
+                  <strong>Узнать больше</strong>
+                  <small>О моих услугах</small>
+                </span>
+              </button>
+            </div>
+          </div>
+          
+        </div>
+        <div className="about-list-container">
+          <h3>Сферы деятельности:</h3>
+          <ul className="about-list">
+            <li>
+              <FaIndustry className="about-icon" /> Разработка и производство
+            </li>
+            <li>
+              <FaHeartbeat className="about-icon" /> Медицина
+            </li>
+            <li>
+              <FaFlask className="about-icon" /> Биомедицина
+            </li>
+            <li>
+              <FaLightbulb className="about-icon" /> Инновации
+            </li>
+            <li>
+              <FaGraduationCap className="about-icon" /> Образовательные мероприятия
+            </li>
+          </ul>
+
+          {/* FBM: MOTIVATION - Expertise highlights */}
+          <div className="expertise-highlights">
+            <p>
+              <FaStar className="highlight-icon" />
+              <strong>Разработка и реализация маркетинговых стратегий</strong>, выведение новых продуктов на рынок, 
+              повышение лояльности и узнаваемости бренда.
+            </p>
+          </div>
 
           {/* CREATE Action Funnel: EVALUATION - Benefits summary */}
           <div className="benefits-box">
@@ -446,45 +603,6 @@ function App() {
               </div>
             </div>
           </div>
-
-          {/* Achievements - MOTIVATION */}
-          <div className="achievements-box">
-            <h3>Достижения и признание:</h3>
-            <div className="achievement-item">
-              <FaCheckCircle className="achievement-icon" />
-              <span>Участие в конкурсе <b>"Новаторы Москвы"</b> (2020 г.)</span>
-            </div>
-            <div className="achievement-item">
-              <FaCheckCircle className="achievement-icon" />
-              <span>Отборочный тур в <b>Совет предпринимателей Москвы</b> (2021 г.)</span>
-            </div>
-          </div>
-
-          {/* CTA in About - PROMPT */}
-          <div className="about-cta">
-            <button className="btn-primary" onClick={scrollToContact}>Обсудить проект</button>
-          </div>
-          
-        </div>
-        <div className="about-list-container">
-          <h3>Сферы деятельности:</h3>
-          <ul className="about-list">
-            <li>
-              <FaIndustry className="about-icon" /> Разработка и производство
-            </li>
-            <li>
-              <FaHeartbeat className="about-icon" /> Медицина
-            </li>
-            <li>
-              <FaFlask className="about-icon" /> Биомедицина
-            </li>
-            <li>
-              <FaLightbulb className="about-icon" /> Инновации
-            </li>
-            <li>
-              <FaGraduationCap className="about-icon" /> Образовательные мероприятия
-            </li>
-          </ul>
         </div>
       </div>
     </div>
